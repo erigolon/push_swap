@@ -6,15 +6,16 @@
 #    By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 14:18:54 by erigolon          #+#    #+#              #
-#    Updated: 2023/05/15 14:43:03 by erigolon         ###   ########.fr        #
+#    Updated: 2023/05/16 12:56:04 by erigolon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	  = push_swap
 
-SRCS 	  =
+SRCS 	  = main.c \
+			check_string.c
 
-OBJS 	  = {SRCS:.c=.o}
+OBJS 	  = ${SRCS:.c=.o}
 
 LIBFT	  = ./libft
 LIBPRINTF = ./ft_printf

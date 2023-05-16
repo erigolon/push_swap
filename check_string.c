@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   check_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/16 12:44:43 by erigolon         ###   ########.fr       */
+/*   Created: 2023/05/16 12:35:28 by erigolon          #+#    #+#             */
+/*   Updated: 2023/05/16 12:58:25 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "./includes/push_swap.h"
 
-# include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
+int	check_string(char *str)
+{
+	int	i;
 
-int	check_string(char *str);
-
-#endif
+	i = 0;
+	while (str[i])
+	{
+		if (!((str[i] >= 48 && str[i] <= 57) || str[i] == 32))
+			return (1);
+		i++;
+	}
+	return (0);
+}
