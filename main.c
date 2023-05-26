@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/16 16:17:36 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/26 13:29:28 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,12 @@ int	main(int argc, char **argv)
 	char	**str;
 
 	if (argc == 2)
-		str = split_string(argv[1]);
+	{
+		str = ft_split(argv[1], ' ');
+		if (!checkers(str, 0))
+			return (free(str), 0);
+		else
+			ft_printf("GUAY!\n");
+	}
+	return (0);
 }

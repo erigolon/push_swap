@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/16 12:44:43 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:44:15 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 # include "../libft/libft.h"
 # include "../ft_printf/ft_printf.h"
 
-int	check_string(char *str);
+int	checkers(char **str, int i);
 
 #endif
