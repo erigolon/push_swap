@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:35:28 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/29 12:16:34 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/29 16:22:17 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	str_is_number(char **str, int i)
 		o = 0;
 		while (str[i][o])
 		{
-			if (!(str[i][o] >= '0' && str[i][o] <= '9')
-				&& str[i][o] != '+' && str[i][o] != '-')
+			if (!(str[i][o] >= '0' && str[i][o] <= '9') && str[i][o] != '+'
+				&& str[i][o] != '-')
 				return (0);
 			o++;
 		}
