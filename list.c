@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:24:53 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/29 17:14:34 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/29 20:38:44 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,15 @@ t_stack	*lstnew_stack(int value)
 	stack->cost_b = -1;
 	stack->next = NULL;
 	return (stack);
+}
+
+t_stack	*lstlast_stack(t_stack *lst)
+{
+	if (!lst)
+		return (0);
+	while (lst->next != 0)
+		lst = lst->next;
+	return (lst);
 }
 
 void	lstadd_back_stack(t_stack **stack, t_stack *new)
