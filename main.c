@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/29 12:24:31 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/29 12:30:35 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int	main(int argc, char **argv)
 		if (!checkers(argv, 1))
 			return (0);
 	}
+	if (argc == 2)
+		free(str);
 	return (0);
 }
