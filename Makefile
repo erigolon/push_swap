@@ -6,14 +6,15 @@
 #    By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 14:18:54 by erigolon          #+#    #+#              #
-#    Updated: 2023/05/16 12:56:04 by erigolon         ###   ########.fr        #
+#    Updated: 2023/05/29 20:47:15 by erigolon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 	  = push_swap
 
 SRCS 	  = main.c \
-			check_string.c
+			check_string.c \
+			list.c
 
 OBJS 	  = ${SRCS:.c=.o}
 
