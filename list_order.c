@@ -6,15 +6,10 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:17:56 by erigolon          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/05/31 13:15:07 by erigolon         ###   ########.fr       */
-=======
-/*   Updated: 2023/05/31 12:40:43 by erigolon         ###   ########.fr       */
->>>>>>> pruebas
+/*   Updated: 2023/05/31 14:35:49 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
 #include "./includes/push_swap.h"
 
 int	is_ordered(t_stack *stack_a)
@@ -60,4 +55,3 @@ void	check_order(t_stack **stack_a, t_stack **stack_b)
 //	{	
 //	}
 }
-*/
