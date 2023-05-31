@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/31 14:37:35 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/31 16:00:16 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	stack_b = NULL;
-
 	if (argc == 2)
 	{
 		str = ft_split(argv[1], ' ');

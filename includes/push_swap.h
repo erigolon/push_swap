@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/31 12:30:48 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/31 16:04:05 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-# include "../ft_printf/ft_printf.h"
 # include <limits.h>
 
 typedef struct s_stack
@@ -33,5 +32,7 @@ t_stack	*add_to_list(int argc, char **argv, int i);
 void	check_order(t_stack **stack_a, t_stack **stack_b);
 int		lstsize_stack(t_stack *stack);
 void	do_sa(t_stack **stack_a);
+void	do_sb(t_stack **stack_b);
+void	do_ss(t_stack **stack_a, t_stack **stack_b);
 
 #endif

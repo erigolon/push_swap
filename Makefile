@@ -6,7 +6,7 @@
 #    By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 14:18:54 by erigolon          #+#    #+#              #
-#    Updated: 2023/05/31 14:40:06 by erigolon         ###   ########.fr        #
+#    Updated: 2023/05/31 16:04:42 by erigolon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS 	  = main.c \
 			check_string.c \
 			list.c \
 			list_order.c \
-			moves.c
+			swap.c
 
 OBJS 	  = ${SRCS:.c=.o}
 
