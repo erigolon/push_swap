@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/31 16:04:05 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/31 17:32:27 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int		checkers(char **str, int i);
 t_stack	*add_to_list(int argc, char **argv, int i);
 void	check_order(t_stack **stack_a, t_stack **stack_b);
 int		lstsize_stack(t_stack *stack);
+void	assign_index(t_stack *stack_a, int len_list);
+void	order_three(t_stack **stack_a);
 void	do_sa(t_stack **stack_a);
 void	do_sb(t_stack **stack_b);
 void	do_ss(t_stack **stack_a, t_stack **stack_b);

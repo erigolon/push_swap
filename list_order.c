@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:17:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/31 16:01:02 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/31 17:31:58 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,8 +49,9 @@ void	check_order(t_stack **stack_a, t_stack **stack_b)
 		do_sa(stack_a);
 	else if (len_list == 3)
 	{
-		order_three(stack_a);
-//	}
+		assign_index(*stack_a, (len_list + 1));
+		order_three(*stack_a);
+	}
 //	else
 //	{	
 //	}
