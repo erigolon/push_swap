@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/31 14:37:05 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:37:35 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,7 @@ int	main(int argc, char **argv)
 			return (0);
 		stack_a = add_to_list(argc, argv, 1);
 	}
-<<<<<<< HEAD
-//	check_order(stack_a);
-=======
 	check_order(&stack_a, &stack_b);
->>>>>>> pruebas
 	while (stack_a->next != NULL)
 	{
 		printf("%d\n", stack_a->value);
