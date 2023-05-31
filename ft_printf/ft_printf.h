@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 12:39:22 by erigolon          #+#    #+#             */
-/*   Updated: 2023/01/19 09:40:10 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/05/31 14:18:01 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <stdlib.h>
 # include <stdio.h>
-# include <unistd.h>
 # include <stdarg.h>
+# include <unistd.h>
 
 int		ft_printf(char const *str, ...);
 int		ft_putcharf(char c);
