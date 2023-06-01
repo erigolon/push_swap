@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   moves.c                                            :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 11:52:38 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/31 16:03:28 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/01 11:36:44 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	do_sa(t_stack **stack_a)
 void	do_sb(t_stack **stack_b)
 {
 	swap(*stack_b);
-	ft_putstr_fd("s\n", 1);
+	ft_putstr_fd("sb\n", 1);
 }
 
 void	do_ss(t_stack **stack_a, t_stack **stack_b)
