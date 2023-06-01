@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/01 11:47:55 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:33:22 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_stack
 
 int		checkers(char **str, int i);
 t_stack	*lstlast_stack(t_stack *lst);
+t_stack	*lstlast_second(t_stack *lst);
 t_stack	*add_to_list(int argc, char **argv, int i);
 void	check_order(t_stack **stack_a, t_stack **stack_b);
 int		lstsize_stack(t_stack *stack);
@@ -37,5 +38,11 @@ void	order_three(t_stack **stack_a);
 void	do_sa(t_stack **stack_a);
 void	do_sb(t_stack **stack_b);
 void	do_ss(t_stack **stack_a, t_stack **stack_b);
+void	do_ra(t_stack **stack_a);
+void	do_rb(t_stack **stack_b);
+void	do_rr(t_stack **stack_a, t_stack **stack_b);
+void	do_rra(t_stack **stack_a);
+void	do_rrb(t_stack **stack_b);
+void	do_rrr(t_stack **stack_a, t_stack **stack_b);
 
 #endif

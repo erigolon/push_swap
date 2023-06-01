@@ -6,11 +6,18 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 16:24:53 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/29 20:38:44 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:33:11 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
+
+t_stack	*lstlast_second(t_stack *lst)
+{
+	while (lst && lst->next && lst->next->next != NULL)
+		lst = lst->next;
+	return (lst);
+}
 
 t_stack	*lstnew_stack(int value)
 {
