@@ -6,7 +6,7 @@
 #    By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 14:18:54 by erigolon          #+#    #+#              #
-#    Updated: 2023/06/01 14:51:16 by erigolon         ###   ########.fr        #
+#    Updated: 2023/06/02 12:28:51 by erigolon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRCS 	  = main.c \
 			sort_three.c \
 			rotate.c \
 			rev_rotate.c \
-			sort_big.c
+			sort_big.c \
+			push.c
 
 OBJS 	  = ${SRCS:.c=.o}
 

@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/02 11:58:33 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/02 14:25:53 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	do_rra(t_stack **stack_a);
 void	do_rrb(t_stack **stack_b);
 void	do_rrr(t_stack **stack_a, t_stack **stack_b);
 void	do_pa(t_stack **stack_a, t_stack **stack_b);
-void	do_pb(t_stack **stack_b, t_stack **stack_a);
+void	do_pb(t_stack **stack_a, t_stack **stack_b);
+void	order_big(t_stack **stack_a, t_stack **stack_b);
 
 #endif

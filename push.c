@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 11:27:12 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/02 11:56:11 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/02 12:33:37 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	do_pa(t_stack **stack_a, t_stack **stack_b)
 	ft_putstr_fd("pa\n", 1);
 }
 
-void	do_pb(t_stack **stack_b, t_stack **stack_a)
+void	do_pb(t_stack **stack_a, t_stack **stack_b)
 {
 	push(stack_a, stack_b);
 	ft_putstr_fd("pb\n", 1);
