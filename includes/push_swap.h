@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/02 14:25:53 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/05 13:23:02 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
+void	printf_error(void);
 int		checkers(char **str, int i);
 t_stack	*lstlast_stack(t_stack *lst);
 t_stack	*lstlast_second(t_stack *lst);

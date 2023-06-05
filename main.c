@@ -6,11 +6,17 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/01 14:44:20 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/05 13:22:29 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
+
+void	printf_error(void)
+{
+	ft_putstr_fd("Error\n", 1);
+	exit (1);
+}
 
 int	len_str(char **str)
 {

@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:35:28 by erigolon          #+#    #+#             */
-/*   Updated: 2023/05/29 16:22:17 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/05 13:32:58 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ int	str_signal(char **str, int i)
 	int	o;
 	int	signal;
 
+	if ((str[i][0] == '-' || str[i][0] == '+')
+		&& str[i][1] == '\0')
+		return (0);
 	while (str[i])
 	{
 		o = 0;
@@ -89,12 +92,12 @@ int	str_double(char **str, int i)
 int	checkers(char **str, int i)
 {
 	if (!str_is_number(str, i))
-		return (0);
+		printf_error();
 	if (!str_signal(str, i))
-		return (0);
+		printf_error();
 	if (!str_max_min(str, i))
-		return (0);
+		printf_error();
 	if (!str_double(str, i))
-		return (0);
+		printf_error();
 	return (1);
 }
