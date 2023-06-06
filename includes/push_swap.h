@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/05 13:23:02 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/06 12:20:40 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	check_order(t_stack **stack_a, t_stack **stack_b);
 int		lstsize_stack(t_stack *stack);
 void	assign_index(t_stack *stack_a, int len_list);
 void	order_three(t_stack **stack_a);
+int		is_ordered(t_stack *stack_a);
 void	do_sa(t_stack **stack_a);
 void	do_sb(t_stack **stack_b);
 void	do_ss(t_stack **stack_a, t_stack **stack_b);
@@ -48,5 +49,7 @@ void	do_rrr(t_stack **stack_a, t_stack **stack_b);
 void	do_pa(t_stack **stack_a, t_stack **stack_b);
 void	do_pb(t_stack **stack_a, t_stack **stack_b);
 void	order_big(t_stack **stack_a, t_stack **stack_b);
+void	pos_target(t_stack **stack_a, t_stack **stack_b);
+void	cost(t_stack **stack_a, t_stack **stack_b);
 
 #endif

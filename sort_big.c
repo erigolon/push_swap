@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:51:02 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/02 14:25:34 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/06 12:20:44 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,14 @@ void	order_big(t_stack **stack_a, t_stack **stack_b)
 {
 	push_stack(stack_a, stack_b);
 	order_three(stack_a);
+	while (*stack_b)
+	{
+		pos_target(stack_a, stack_b);
+		cost(stack_a, stack_b);
+		cheap_move(stack_a, stack_b);
+	}
+	if (!is_ordered(*stack_a))
+	{
+
+	}
 }
