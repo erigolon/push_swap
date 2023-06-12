@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/12 13:22:32 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/12 13:36:06 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	order_big(t_stack **stack_a, t_stack **stack_b);
 void	pos_target(t_stack **stack_a, t_stack **stack_b);
 void	cost(t_stack **stack_a, t_stack **stack_b);
 void	cheap_move(t_stack **stack_a, t_stack **stack_b);
-int		abs_n(int n);
 void	do_move(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
 
 #endif
