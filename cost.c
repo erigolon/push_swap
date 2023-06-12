@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 12:05:23 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/06 12:17:40 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/12 12:34:51 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,26 @@ void	cost(t_stack **stack_a, t_stack **stack_b)
 			temp_b->cost_a = (size_a - temp_b->target_pos) * -1;
 		temp_b = temp_b->next;
 	}
+}
+
+void	cheap_move(t_stack **stack_a, t_stack **stack_b)
+{
+	t_stack	*temp;
+	int		cheap;
+	int		cost_a;
+	int		cost_b;
+
+	temp = *stack_b;
+	cheap = INT_MAX;
+	while (temp)
+	{
+		if (abs_n(temp->cost_a) + abs_n(temp->cost_b) < abs_n(cheap))
+		{
+			cheap = abs_n(temp->cost_a) + abs_n(temp->cost_b);
+			cost_a = temp->cost_a;
+			cost_b = temp->cost_b;
+		}
+		temp = temp->next;
+	}
+	do_move(stack_a, stack_b, cost_a, cost_b);
 }
