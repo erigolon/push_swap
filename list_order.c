@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 10:17:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/02 14:27:31 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:58:52 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ int	lstsize_stack(t_stack *stack)
 	int	nodes;
 
 	nodes = 0;
-	while (stack != 0)
+	if (!stack)
+		return (0);
+	while (stack)
 	{
-		nodes++;
 		stack = stack->next;
+		nodes++;
 	}
 	return (nodes);
 }

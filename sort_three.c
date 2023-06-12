@@ -6,13 +6,13 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 16:41:24 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/01 11:25:56 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:54:42 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-int	find_highest(t_stack *stack)
+static int	find_highest(t_stack *stack)
 {
 	int	index;
 

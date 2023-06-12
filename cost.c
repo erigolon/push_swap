@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 12:05:23 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/12 13:35:53 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:11:58 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	cost(t_stack **stack_a, t_stack **stack_b)
 
 	temp_a = *stack_a;
 	temp_b = *stack_b;
-	size_a = lstsize_stack(stack_a);
-	size_b = lstsize_stack(stack_b);
+	size_a = lstsize_stack(*stack_a);
+	size_b = lstsize_stack(*stack_b);
 	while (temp_b)
 	{
-		temp_b->cost_b = temp_b->index;
+		temp_b->cost_b = temp_b->pos;
 		if (temp_b->pos > size_b / 2)
 			temp_b->cost_b = (size_b - temp_b->pos) * -1;
 		temp_b->cost_a = temp_b->target_pos;
@@ -38,7 +38,7 @@ void	cost(t_stack **stack_a, t_stack **stack_b)
 int	abs_n(int n)
 {
 	if (n < 0)
-		n = n * -1;
+		return (n * -1);
 	return (n);
 }
 

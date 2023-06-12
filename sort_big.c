@@ -6,13 +6,13 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 14:51:02 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/06 12:20:44 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/12 14:54:27 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/push_swap.h"
 
-void	push_stack(t_stack **stack_a, t_stack **stack_b)
+static void	push_stack(t_stack **stack_a, t_stack **stack_b)
 {
 	int	size_lst;
 	int	pushed;
@@ -39,6 +39,31 @@ void	push_stack(t_stack **stack_a, t_stack **stack_b)
 	}
 }
 
+static void	final_stack(t_stack **stack_a)
+{
+	int	low_pos;
+	int	stack_size;
+
+	stack_size = lstsize_stack(*stack_a);
+	low_pos = index_low_pos(stack_a);
+	if (low_pos > stack_size / 2)
+	{
+		while (low_pos < stack_size)
+		{
+			do_rra(stack_a);
+			low_pos++;
+		}
+	}
+	else
+	{
+		while (low_pos > 0)
+		{
+			do_ra(stack_a);
+			low_pos--;
+		}
+	}
+}
+
 void	order_big(t_stack **stack_a, t_stack **stack_b)
 {
 	push_stack(stack_a, stack_b);
@@ -50,7 +75,5 @@ void	order_big(t_stack **stack_a, t_stack **stack_b)
 		cheap_move(stack_a, stack_b);
 	}
 	if (!is_ordered(*stack_a))
-	{
-
-	}
+		final_stack(stack_a);
 }
