@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/05 13:22:29 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/13 10:48:18 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,20 @@ void	printf_error(void)
 {
 	ft_putstr_fd("Error\n", 1);
 	exit (1);
+}
+
+int	only_space(char **str)
+{
+	int	o;
+
+	o = 0;
+	while (str[1][o])
+	{
+		if (str[1][o] != ' ')
+			return (1);
+		o++;
+	}
+	return (0);
 }
 
 int	len_str(char **str)
@@ -36,6 +50,8 @@ int	main(int argc, char **argv)
 
 	if (argc == 1)
 		return (0);
+	if (argv[1][0] == '\0' || !only_space(argv))
+		printf_error();
 	stack_b = NULL;
 	if (argc == 2)
 	{
