@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 16:04:56 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/12 14:53:39 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/13 11:45:23 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct s_stack
 
 void	printf_error(void);
 int		checkers(char **str, int i);
+int		str_nb_signal(char **str, int i);
 t_stack	*lstlast_stack(t_stack *lst);
 t_stack	*lstlast_second(t_stack *lst);
 t_stack	*add_to_list(int argc, char **argv, int i);
@@ -54,5 +55,6 @@ void	cost(t_stack **stack_a, t_stack **stack_b);
 void	cheap_move(t_stack **stack_a, t_stack **stack_b);
 void	do_move(t_stack **stack_a, t_stack **stack_b, int cost_a, int cost_b);
 int		index_low_pos(t_stack **stack);
+void	free_stack(t_stack **stack);
 
 #endif

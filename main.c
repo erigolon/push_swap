@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/13 10:48:18 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/13 11:43:13 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,28 @@
 
 void	printf_error(void)
 {
-	ft_putstr_fd("Error\n", 1);
+	ft_putstr_fd("Error\n", 2);
 	exit (1);
+}
+
+int	str_nb_signal(char **str, int i)
+{
+	int	o;
+	int	signal;
+
+	while (str[i])
+	{
+		o = 1;
+		while (str[i][o])
+		{
+			if (str[i][o] == '+' || str[i][o] == '-')
+				if (str[i][o - 1] != ' ')
+					return (0);
+			o++;
+		}
+		i++;
+	}
+	return (1);
 }
 
 int	only_space(char **str)
@@ -48,8 +68,6 @@ int	main(int argc, char **argv)
 	t_stack	*stack_b;
 	char	**str;
 
-	if (argc == 1)
-		return (0);
 	if (argv[1][0] == '\0' || !only_space(argv))
 		printf_error();
 	stack_b = NULL;
@@ -68,5 +86,7 @@ int	main(int argc, char **argv)
 		stack_a = add_to_list(argc, argv, 1);
 	}
 	check_order(&stack_a, &stack_b);
+	free_stack(&stack_a);
+	free_stack(&stack_b);
 	return (0);
 }
