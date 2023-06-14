@@ -6,7 +6,7 @@
 /*   By: erigolon <erigolon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:03:37 by erigolon          #+#    #+#             */
-/*   Updated: 2023/06/13 13:37:23 by erigolon         ###   ########.fr       */
+/*   Updated: 2023/06/14 12:51:59 by erigolon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ int	main(int argc, char **argv)
 	t_stack	*stack_b;
 	char	**str;
 
+	if (argc == 1)
+		return (0);
 	if (argv[1][0] == '\0' || !only_space(argv))
 		printf_error();
 	stack_b = NULL;
@@ -86,7 +88,5 @@ int	main(int argc, char **argv)
 		stack_a = add_to_list(argc, argv, 1);
 	}
 	check_order(&stack_a, &stack_b);
-	free_stack(&stack_a);
-	free_stack(&stack_b);
 	return (0);
 }
